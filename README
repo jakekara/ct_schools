@@ -13,4 +13,5 @@ ct schools - python library for getting profile data on ct schools from fuzzy sc
 	#    lat_lng, a typical lat, long tuple
 	#    lat, latitude by itself
 	#    lng, longitude by itself
+	
 	print schools.school_by_name("Shepau Valley", closest=True)
