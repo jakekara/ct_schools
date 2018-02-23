@@ -29,6 +29,7 @@ def clean_name_col():
     return clean_series(name_col())
 
 def fuzz_ratio(a, b):
+
     return fuzz.ratio(clean_name(a), clean_name(b))
 
 def fuzz_min(a, b, min_ratio=90):
@@ -43,12 +44,19 @@ def fuzz_df(name):
 
     return df
 
-def __school_by_name_closest(name):
+def __school_by_name_closest(name, lim=1):
 
     df = fuzz_df(name)
 
-    return df.sort_values(by="FUZZ_RATIO", ascending=False).head(1)
-                                               
+    return df.sort_values(by="FUZZ_RATIO", ascending=False).head(lim)
+
+def __school_by_name_minfuzz(name, ratio=75):
+
+    df = fuzz_df(name)
+
+    return df[df["FUZZ_RATIO"] >= ratio].sort_values(by="FUZZ_RATIO",
+                                                     ascending=False)
+
 
 def __school_by_name_exact(name):
     df = schooldf()
@@ -74,8 +82,20 @@ def school_by_name(name, partial=True, min_fuzz=None, closest=True):
         return __school_by_name_exact(name)
     
     if min_fuzz is not None and type(min_fuzz) is int:
-        return __school_by_minfuzz(name, min_fuzz)
+        return __school_by_name_minfuzz(name, min_fuzz)
 
     # default
     return __school_by_name_contains(name)
 
+def closest(name, lim=1):
+    return __school_by_name_closest(name,lim=3)
+
+
+def exact(name):
+    return __school_by_name_exact(name)
+
+def contains(name):
+    return __school_by_name_contains(name)
+
+def fuzzy(name, ratio=75):
+    return __school_by_name_minfuzz(name, ratio=ratio)

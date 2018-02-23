@@ -1,16 +1,21 @@
 
 import ct_schools.schools as schools
-import json
-# print schools.school_by_name("Shepau Valley", closest=True)
 
-# print schools.schooldf().head(1)
+print "-" * 20
+print "FIND THE CLOSEST MATCH"
+print schools.closest("Shepau Vall")
 
-# print schools.school_by_name("Shepaug")
+print "-" * 20
+print "FIND THE CLOSEST 3 MATCHES"
+print schools.closest("Shepaug Valley School",lim=3)
 
-print json.dumps(
-    json.loads(
-        schools.school_by_name("Shepau Valley", closest=True).to_json(orient="records")
-        ), indent=2
-    )
+print "-" * 20
+print "FIND AN EXACT (CASE-INSENSITIVE) MATCH"
+print schools.exact("Shepaug Valley School")
+
+print "-" * 20
+print "FIND ALL MATCHES WITH A FUZZ RATIO ABOVE 80"
+print schools.fuzzy("Shepaug Valley School", ratio=80)
+
 
 

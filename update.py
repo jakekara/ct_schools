@@ -1,5 +1,14 @@
 #
-# Get the latest package data from state data portal
+# update.py
+# dev script for ct-schools package
+# by Jake Kara
+# jake@jakekara.com
+#
+# Get the latest data from state data portal
+# to bundle with package
+#
+# Also add some columns with lat long separate
+# from the street address
 #
 
 import pandas as pd

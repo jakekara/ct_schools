@@ -1,0 +1,14 @@
+	0.0.5
+
+	Everything so far has just really been the 0.0, but I needed to
+	keep changing the version to push to PyPi.
+
+	Separated out the following functions
+
+	.closest(SCHOOL_NAME_STRING, lim=1)
+
+	.exact(SCHOOL_NAME_STRING)
+
+	.contains(SCHOOL_NAME_STRING)
+
+	.fuzz(SCHOOL_NAME, ratio=75)
