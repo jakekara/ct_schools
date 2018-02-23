@@ -1,0 +1,14 @@
+ct schools - python library for getting profile data on ct schools from fuzzy school names
+
+	from ct_schools import schools
+
+	# returns a data frame with the closest match
+	# df contains data from:
+	#     https://data.ct.gov/Education/CT-Public-Schools/3z9z-e275
+	# but splits out the lat long from the address, which for some
+	# reason is concatenated in this table
+	# so you get these extra columns:
+	#    lat_lng, a typical lat, long tuple
+	#    lat, latitude by itself
+	#    lng, longitude by itself
+	print schools.school_by_name("Shepau Valley", closest=True)
