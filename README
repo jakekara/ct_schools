@@ -3,6 +3,19 @@ CT_SCHOOLS
     A python library for getting profile data on ct schools from fuzzy
     school names
 
+    Data comes from here:
+    https://data.ct.gov/Education/CT-Public-Schools/3z9z-e275
+
+    And removes separates out the lat/lng from the school address field.
+
+    Fuzziness comes from fuzzywuzzy: https://github.com/seatgeek/fuzzywuzzy
+
+WHY?
+
+    I have a lot of spreadsheets with school names spelled almost the same
+    way. This helps a lot.
+    
+
 INSTALL
 
     pip install ct_schools 
