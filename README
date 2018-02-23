@@ -1,5 +1,7 @@
 ct schools - python library for getting profile data on ct schools from fuzzy school names
 
+# Example usage
+
 	from ct_schools import schools
 
 	# returns a data frame with the closest match
