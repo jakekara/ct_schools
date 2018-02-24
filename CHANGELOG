@@ -1,3 +1,12 @@
+	CHANGELOG
+	
+	0.0.6
+
+	Refactoring code to cut out the *school_by_name_* helper
+	functions. The data structuring, fuzzing functions provide enough
+	functionality to build the api functions listed in 0.0.5 note in a
+	DRY manner.
+	
 	0.0.5
 
 	Everything so far has just really been the 0.0, but I needed to
