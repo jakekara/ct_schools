@@ -1,6 +1,7 @@
 README
 setup.py
 ct_schools/__init__.py
+ct_schools/helpers.py
 ct_schools/schools.py
 ct_schools.egg-info/PKG-INFO
 ct_schools.egg-info/SOURCES.txt
