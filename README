@@ -23,7 +23,7 @@ INSTALL
 FUNCTIONS
 
     All functions below return a DataFrame or None. See demo/*.py to see
-    them in action.  
+    them in action, or read through tests/test_api.py.
 
     * schools.closest(SCHOOL_NAME_STRING, lim=n) - return the closest n
       matches (defaults to 1 match) for the given school name.
@@ -36,4 +36,19 @@ FUNCTIONS
 
     * schools.fuzz(SCHOOL_NAME, ratio=75) - return schools with names above
       the given fuzzywuzzy ratio (defaults to 75)
+
+    * schools.dictify(dataframe) - convert the dataframe to a
+      record-oriented list of dicts
+
+    * schools.jasonify(dataframe) - convert the dataframe to
+      record-oriented json string
+
+TESTS
+
+    To run tests use:
+
+       	   py.test tests/
+
+    from root directory of this repo.
+    Requires pytest, pandas
 

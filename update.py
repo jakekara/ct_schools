@@ -1,15 +1,6 @@
-#
-# update.py
-# dev script for ct-schools package
-# by Jake Kara
-# jake@jakekara.com
-#
-# Get the latest data from state data portal
-# to bundle with package
-#
-# Also add some columns with lat long separate
-# from the street address
-#
+#!/user/bin/env python2
+
+""" Get the latest data from state data portal and prepare for package """
 
 import pandas as pd
 import re
@@ -52,7 +43,7 @@ def add_cols(df):
     return ret
 
 def save(df):
-    df.to_csv("ct_schools/data/schools.csv")
+    df.to_csv("ct_schools/data/schools.csv",index=False)
 
 
 def main():

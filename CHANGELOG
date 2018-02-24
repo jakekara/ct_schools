@@ -2,17 +2,27 @@
 	
 	0.0.6
 
-	Refactoring code to cut out the *school_by_name_* helper
+	MOVED helpers in helpers.py so api is ONLY the API functions.
+
+	Added API function tests in tests/ directory.
+
+	Moved to triple-quote comments
+
+	Refactored code to cut out the *school_by_name_* helper
 	functions. The data structuring, fuzzing functions provide enough
 	functionality to build the api functions listed in 0.0.5 note in a
 	DRY manner.
+
+	Fixed update script to not save index column to data csv.
 	
 	0.0.5
 
 	Everything so far has just really been the 0.0, but I needed to
 	keep changing the version to push to PyPi.
 
-	Separated out the following functions
+	Separated out the following functions. Originally I thought
+	finding schools by name would only be one function with options,
+	but this is more expressive and simpler.
 
 	.closest(SCHOOL_NAME_STRING, lim=1)
 
