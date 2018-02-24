@@ -43,6 +43,12 @@ FUNCTIONS
     * schools.jasonify(dataframe) - convert the dataframe to
       record-oriented json string
 
+DEMO
+
+    In addition to the demo/*.py files, there is a .ipynb notebook in the
+    demo folder that shows a realistic use case for this library, and in
+    fact the use case that made me write it in the first place.
+
 TESTS
 
     To run tests use:
